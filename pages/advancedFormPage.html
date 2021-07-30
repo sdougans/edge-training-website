@@ -1,145 +1,146 @@
 <html>
-	<head>
-		<title>
-			Advanced Form | EdgeTraining
-		</title>
-		<link rel = "stylesheet" type = "text/css" href = "../css/advanced.css">
-		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../icons/favicon.ico">
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
-		<script>
-			function validateForm() {
 
-				function myFunction() {
+<head>
+	<title>
+		Advanced Form | EdgeTraining
+	</title>
+	<link rel="stylesheet" type="text/css" href="../css/advanced.css">
+	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../icons/favicon.ico">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<script>
+		function validateForm() {
 
-				}
+			function myFunction() {
 
-  				var fName = document.forms["basic_form"]["name"].value;
-  				var gender = document.forms["basic_form"]["gender"].value;
-  				var age = document.forms["basic_form"]["age"].value;
-  				var password = document.forms["basic_form"]["pass"].value;
-
-  				var errorBuffer = "";
-
-  				if (fName == "") {
-    				errorBuffer += "Name must not be blank!\n";
-  				}
-  				if (gender == "") {
-    				errorBuffer += "Gender must not be blank!\n";
-  				}
-  				if (password == "") {
-    				errorBuffer += "Password must not be blank!\n";
-  				}
-
-  				if(errorBuffer.length != 0){
-  					alert(errorBuffer);
-  					return false;
-  				}
-
-  				setTimeout(myFunction, 5000);
-  				return true;
 			}
-			function logoutAlert(){
-				var text;
-				if(confirm("Are you sure you want to log out?")){
-					window.location.href='../pages/loginPage.html'
-				}
-			}
-		</script>
-	</head>
-	<body>
-		<div id="top_div">
-			<div id="title_div">
-				EdgeTraining
-			</div>
-		</div>
-		<div id="main_div">
-			<div id="left_stuff">
-				<div id="left_menu_links">
-					<a href="../pages/homePage.html">Home</a>
-					<a href="../pages/formPage.html">Simple form</a>
-					<a href="../pages/advancedFormPage.html">Advanced form</a>
-					<a href="../pages/store.html">Store</a>
-                    <a onclick="logoutAlert()">Logout</a>
-				</div>
-			</div>
 
-			<div id="main_area">
-				<div class="form_div">
-					<form class="myForm" name="basic_form" method="post" action="../php/submittedAdvForm.php" onsubmit="return validateForm()">
-						<p>
-							<label><strong>Name:</strong>
-								<input type="text" name="customer_name" id="name" required>
-							</label>
-						</p>
-						<br>
-						<p>
-							<label><strong>Phone:</strong>
-								<input type="tel" name="phone_number" id="phone">
-							</label>
-						</p>
-						<br>
-						<p>
-							<label><strong>Email:</strong>
-								<input type="email" name="email_address" id="email">
-							</label>
-						</p>
-						<br>
-						<br>
-						<fieldset>
-							<legend><strong>Favourite Store?</strong></legend>
-							<p><label> <input type="radio" name="store" required value="asda"> Asda </label></p>
-							<p><label> <input type="radio" name="store" required value="tesco"> Tesco </label></p>
-							<p><label> <input type="radio" name="store" required value="sainsburys"> Sainsbury's </label></p>
-						</fieldset>
-						<br>
-						<fieldset>
-							<legend><strong>How Would you Travel to Store?</strong></legend>
-							<p><label> <input type="checkbox" name="extras" value="baby"> Car </label></p>
-							<p><label> <input type="checkbox" name="extras" value="wheelchair"> Bus </label></p>
-							<p><label> <input type="checkbox" name="extras" value="tip"> Walk </label></p>
-						</fieldset>
-						<br>
-						<p>
-							<label><strong>Time You Usually Do Shopping?</strong>
-								<input type="time" name="pickup_time" required>
-							</label>
-						</p>
-						<br>
-						<p>
-							<label><strong>How Far Away is Closest Store</strong>
-									<select id="pickup_place" name="pickup_place">
-									<option value="" selected="selected">Select One</option>
-									<option value="one_mile" >Within 1 Mile</option>
-									<option value="one_five_mile" >1-5 Miles</option>
-									<option value="over_five_mile" >Over 5 Miles</option>
-								</select>
-							</label>
-						</p>
-						<br>
-						<br>
-						<p>
-							<label><strong>Special Instructions</strong>
-								<textarea name="comments" maxlength="500"></textarea>
-							</label>
-						</p>
-						<br>
-						<br>
-						<div>
-							<input class="form_btn" method="post" type="submit" id="clear_btn" value="Clear" formaction="../pages/advancedFormPage.html"></input>
-							<input class="form_btn" type="submit" id="submit_btn"></input>
-						</div>
-						<br>
-					</form>
-					<br><br><br>
-				</div>
+			var fName = document.forms["basic_form"]["name"].value;
+			var gender = document.forms["basic_form"]["gender"].value;
+			var age = document.forms["basic_form"]["age"].value;
+			var password = document.forms["basic_form"]["pass"].value;
+
+			var errorBuffer = "";
+
+			if (fName == "") {
+				errorBuffer += "Name must not be blank!\n";
+			}
+			if (gender == "") {
+				errorBuffer += "Gender must not be blank!\n";
+			}
+			if (password == "") {
+				errorBuffer += "Password must not be blank!\n";
+			}
+
+			if (errorBuffer.length != 0) {
+				alert(errorBuffer);
+				return false;
+			}
+
+			setTimeout(myFunction, 5000);
+			return true;
+		}
+		function logoutAlert() {
+			var text;
+			if (confirm("Are you sure you want to log out?")) {
+				window.location.href = '../pages/loginPage.html'
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="top_div">
+		<div id="title_div">
+			EdgeTraining
+		</div>
+	</div>
+	<div id="main_div">
+		<div id="left_stuff">
+			<div id="left_menu_links">
+				<a href="../pages/homePage.html">Home</a>
+				<a href="../pages/formPage.html">Simple form</a>
+				<a href="../pages/advancedFormPage.html">Advanced form</a>
+				<a href="../pages/store.html">Store</a>
+				<a onclick="logoutAlert()">Logout</a>
 			</div>
 		</div>
-		<div id="copyright_footer">
-			<div id="right_footer">
-				&copy; Edge Testing 2019. All Rights Reserved. All third party trademarks are hereby acknowledged.
+
+		<div id="main_area">
+			<div class="form_div">
+				<form class="myForm" name="basic_form" method="post" action="../php/submittedAdvForm.php"
+					onsubmit="return validateForm()">
+					<p>
+						<label><strong>Name:</strong>
+							<input type="text" name="customer_name" id="name" required>
+						</label>
+					</p>
+					<br>
+					<p>
+						<label><strong>Phone:</strong>
+							<input type="tel" name="phone_number" id="phone">
+						</label>
+					</p>
+					<br>
+					<p>
+						<label><strong>Email:</strong>
+							<input type="email" name="email_address" id="email">
+						</label>
+					</p>
+					<br>
+					<br>
+					<fieldset>
+						<legend><strong>Favourite Store?</strong></legend>
+						<p><label> <input type="radio" name="store" required value="asda"> Asda </label></p>
+						<p><label> <input type="radio" name="store" required value="tesco"> Tesco </label></p>
+						<p><label> <input type="radio" name="store" required value="sainsburys"> Sainsbury's </label>
+						</p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend><strong>How Would you Travel to Store?</strong></legend>
+						<p><label> <input type="checkbox" name="extras" value="baby"> Car </label></p>
+						<p><label> <input type="checkbox" name="extras" value="wheelchair"> Bus </label></p>
+						<p><label> <input type="checkbox" name="extras" value="tip"> Walk </label></p>
+					</fieldset>
+					<br>
+					<p>
+						<label><strong>Time You Usually Do Shopping?</strong>
+							<input type="time" name="pickup_time" required>
+						</label>
+					</p>
+					<br>
+					<p>
+						<label><strong>How Far Away is Closest Store</strong>
+							<select id="pickup_place" name="pickup_place">
+								<option value="" selected="selected">Select One</option>
+								<option value="one_mile">Within 1 Mile</option>
+								<option value="one_five_mile">1-5 Miles</option>
+								<option value="over_five_mile">Over 5 Miles</option>
+							</select>
+						</label>
+					</p>
+					<br>
+					<br>
+					<p>
+						<label><strong>Special Instructions</strong>
+							<textarea name="comments" maxlength="500"></textarea>
+						</label>
+					</p>
+					<br>
+					<br>
+					<div>
+						<input class="form_btn" method="post" type="submit" id="clear_btn" value="Clear"
+							formaction="../pages/advancedFormPage.html"></input>
+						<input class="form_btn" type="submit" id="submit_btn"></input>
+					</div>
+					<br>
+				</form>
+				<br><br><br>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>

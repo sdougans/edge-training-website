@@ -1,78 +1,78 @@
 <html>
-	<head>
-		<title>
-			Login | EdgeTraining
-		</title>
-		<link rel = "stylesheet" type = "text/css" href = "../css/login.css">
-		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../icons/favicon.ico">
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
-		<script>
-			function validateLogin() {
-			
-				function myFunction1() {
 
-				}
-				
-  				var username = document.forms["loginForm"]["username"].value;
-  				var password = document.forms["loginForm"]["password"].value;
-  				
-  				var errorBuffer1 = "";
-  				
-  				if (username == "") {
-    				errorBuffer1 += "Username field must not be empty!\n";
-  				}
-  				if(password == ""){
-  					errorBuffer1 += "Password field must not be empty!";
-  				}
-  				
-  				if(errorBuffer1.length != 0){
-  					alert(errorBuffer1);
-  					return false;
-  				}
-  				
-  				setTimeout(myFunction1, 5000);
-  				return true;
+<head>
+	<title>
+		Login | EdgeTraining
+	</title>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../icons/favicon.ico">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<script>
+		function validateLogin() {
+
+			function myFunction1() {
+
 			}
-		</script>
-	</head>
-	<body>
-		<div id="top_div">
-			<div id="title_div">
-				Welcome to EdgeTraining
+
+			var username = document.forms["loginForm"]["username"].value;
+			var password = document.forms["loginForm"]["password"].value;
+
+			var errorBuffer1 = "";
+
+			if (username == "") {
+				errorBuffer1 += "Username field must not be empty!\n";
+			}
+			if (password == "") {
+				errorBuffer1 += "Password field must not be empty!";
+			}
+
+			if (errorBuffer1.length != 0) {
+				alert(errorBuffer1);
+				return false;
+			}
+
+			setTimeout(myFunction1, 5000);
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="top_div">
+		<div id="title_div">
+			Welcome to EdgeTraining
+		</div>
+	</div>
+	<div id="main_div">
+		<div id="left_stuff">
+			<div id="left_menu_links">
+				<a href="../pages/welcomePage.html">Home</a>
+				<a href="../pages/loginPage.html">Login</a>
+
 			</div>
 		</div>
-		<div id="main_div">
-			<div id="left_stuff">
-				<div id="left_menu_links">
-					<a href="../pages/welcomePage.html">Home</a>
-					<a href="../pages/loginPage.html">Login</a>
-					
+		<div id="main_area" class="form_div">
+
+			<form name="loginForm" method="post" action="../php/login.php" onsubmit="return validateLogin()">
+				<div>
+					<u>Username</u>:
+					<input id="username" name="username" placeholder="Type your username.."></input><br></br>
 				</div>
-			</div>
-			<div id="main_area" class="form_div">
-			
-				<form name="loginForm" method="post" action="../php/login.php" onsubmit="return validateLogin()">
-					<div>
-						<u>Username</u>:
-						<input id="username" name="username" placeholder="Type your username.."></input><br></br>
-					</div>
-					<div><u>Password</u>:
-						<input type="password" id="password" name="password" placeholder="Type your password.."></input><br></br>
-					</div>
-					<div>
-						<input class="form_btn" method="post" type="submit" id="register" value="Register" formaction="../php/register.php"></input>
-						<input class="form_btn" type="submit" id="login" value="Login"></input>
-					</div>
-				</form>
-				
-			</div>
+				<div><u>Password</u>:
+					<input type="password" id="password" name="password"
+						placeholder="Type your password.."></input><br></br>
+				</div>
+				<div>
+					<input class="form_btn" method="post" type="submit" id="register" value="Register"
+						formaction="../php/register.php"></input>
+					<input class="form_btn" type="submit" id="login" value="Login"></input>
+				</div>
+			</form>
+
 		</div>
-		<div id="copyright_footer">
-			<div id="right_footer">
-				&copy; Edge Testing 2019. All Rights Reserved. All third party trademarks are hereby acknowledged.
-			</div>
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>
