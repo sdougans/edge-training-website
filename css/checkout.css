@@ -1,0 +1,258 @@
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+body{
+	background-color: rgb(247,247,247);
+	height:*;
+}
+
+#top_div {
+	background-color: rgb(253,152,54);
+	color: white;
+	font-size: 2.813em;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	width: 100%;
+}
+
+#image_div {
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	display: inline;
+}
+
+#title_div {
+	text-align: center;
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+}
+
+.main_logo_big {
+	margin-top: 4px;
+	margin-left: 12px;
+	height: 85;
+	width: 170;
+}
+
+#main_div {
+	height:100%auto;
+	width:100%;
+	margin:auto;
+	background-color: rgb(247,247,247);
+	width: 100%;
+	display:block;
+
+}
+
+
+
+#left_stuff {
+	width: 15%;
+	background-color: rgb(247,247,247);
+	float: left;
+}
+
+#left_menu_links {
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+a {
+	height: 5%;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(253,152,54);
+	border-width: 5px;
+	border-style: ridge;
+	border-color: rgb(71,51,51);
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+a:hover {
+  color: black;
+}
+
+a[onclick]{
+cursor: pointer;
+}
+
+.myForm{
+	height: auto;
+	font-size: 1.2em;
+	 vertical-align: middle;
+	 border-width: 5px;
+ 	border-style: ridge;
+ 	border-color: rgb(71,51,51);
+	background-color: white;
+	margin-bottom: 50px;
+	width: 50%;
+}
+
+form.myForm{
+	margin-top: 2.5%;
+
+	float:left;
+	padding: 20px 20px 20px 20px;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm select{
+display: block;
+width: 80%;
+border: 1px solid #ccc;
+font-family: "Times New Roman", Times, serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.form_btn {
+margin-left:59.5%;
+width:25%;
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: 2px solid;
+border-color: gray;
+font-weight: bold;
+margin-top: 1em;
+
+}
+
+.form_btn:hover {
+background: #ccc;
+cursor: pointer;
+}
+
+.form_para{
+	display: inline;
+	margin-left: 23%;
+}
+
+
+#copyright_footer {
+background-color: rgb(247,247,247);
+text-align: center;
+height: auto;
+color: black;
+font-size: 0.8em;
+font-family: "Times New Roman", Times, serif;
+padding: 2px 2px 2px 2px;
+clear:both;
+position:fixed;
+left:0px;
+bottom:0px;
+}
+
+
+#right_footer {
+background-color: rgb(253,152,54);
+color:white;
+left:0px;
+bottom:0px;
+position: fixed;
+text-align: center;
+width:100%;
+}
+
+
+/*W3 Schools*/
+/*
+* {
+  box-sizing: border-box;
+}
+
+*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*.col-25 {
+  flex: 25%;
+}*/
+
+.col-50 {
+  flex: 50%;
+}
+/*
+.col-75 {
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+*/
+@media (max-width: 900px) {
+	.row {
+		flex-direction: column;
+	}
+	.myForm{
+		width: 350px;
+	}
+}

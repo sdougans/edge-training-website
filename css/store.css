@@ -1,0 +1,272 @@
+
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+#top_div {
+	background-color: rgb(253,152,54);
+	color: white;
+	font-size: 2.813em;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	width: 100%;
+}
+
+#title_div {
+	text-align: center;
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+}
+
+#main_div {
+	height:auto;
+	margin:auto;
+	background-color: rgb(247,247,247);
+	width: 100%;
+	display:block;
+
+}
+
+#left_stuff {
+	width: 15%;
+	background-color: rgb(247,247,247);
+	float: left;
+}
+
+#left_menu_links {
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+a {
+	height: 5%;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(253,152,54);
+	border-width: 5px;
+	border-style: ridge;
+	border-color: rgb(71,51,51);
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+a:hover {
+  color: black;
+}
+
+a[onclick]{
+	cursor: pointer;
+}
+
+#copyright_footer {
+	background-color: rgb(253,152,54);
+	text-align: center;
+	height: auto;
+	color: white;
+	font-size: 0.8em;
+	font-family: "Times New Roman", Times, serif;
+	clear:both;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+}
+
+/* IMPORTED CODE */
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shop-item {
+    margin: 30px;
+}
+
+#product_text_1, #product_text_2, #product_text_3, #product_text_4 {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#img1, #img2, #img3, #img4 {
+    height: 250px;
+	width: 250px;
+}
+
+.shop-item-details {
+    align-items: center;
+    padding: 5px;
+}
+
+#price_1, #price_2, #price_3, #price_4 {
+    flex-grow: 1;
+	text-align: center;
+    color: #333;
+}
+
+.slider {
+	top: 55px;
+	position: relative;
+	-webkit-appearance: none;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	margin-left: 25%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgb(253,152,54);
+  cursor: pointer;
+}
+.item-text{
+	text-align: center;
+}
+
+.shop-item-button{
+	top: 55px;
+	margin-left: 25%;
+	position: relative;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}

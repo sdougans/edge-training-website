@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>
+			Store | EdgeTraining
+		</title>
+		<link rel = "stylesheet" type = "text/css" href = "../css/store.css">
+		<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="../icons/favicon.ico">
+		<meta charset="utf-8" /> 
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<script src="../js/store.js"></script>
+		<script>
+			function logoutAlert(){
+				var text;
+				if(confirm("Are you sure you want to log out?")){
+					window.location.href='../pages/loginPage.html';
+				}
+			}
+			function validateForm(){
+				var total = document.forms["shop"]["total_price"].value;
+				var errorBuffer = "";
+				
+				if (total == "£0.00") {
+    				errorBuffer += "You must add an item to cart!";
+  				}
+				
+				if(errorBuffer.length != 0){
+  					alert(errorBuffer);
+  					return false;
+  				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="top_div">
+			<div id="title_div">
+				EdgeTraining
+			</div>
+		</div>
+		<div id="main_div">
+			<div id="left_stuff">
+				<div id="left_menu_links">
+					<a href="../pages/homePage.html">Home</a>
+					<a href="../pages/formPage.html">Simple form</a>
+					<a href="../pages/advancedFormPage.html">Advanced form</a>
+					<a href="../pages/store.html">Store</a>
+                    <a onclick="logoutAlert()">Logout</a>
+				</div>
+			</div>
+			<form name="shop" method="post" action="../php/checkout.php" onsubmit="return validateForm()">
+				<section class="container content-section">
+					
+					<div class="shop-items">
+						<div class="shop-item">
+							<span class="shop-item-title" id="product_text_1" name="product_text_1">Bread</span>
+							<img class="shop-item-image" id="img1" name="product_image_1" src="../img/bread.jpg">
+							<div class="shop-item-details">
+								<p class="shop-item-price" id="price_1" name="price_1">&pound;12.99</p>
+								<input type="range" min="1" max="20" value="1" id="sliderBread" class="slider">
+								<p class="item-text">Quantity to add: <span id="number"></span></p>
+								<input type="hidden" id ="bread" name="bread" value='Bread'/>
+								<input type="hidden" id ="bread_price" name="bread_price" value='£0'/>
+								<input type="hidden" id ="bread_quantity" name="bread_quantity" value='0'/>
+								<script type="text/javascript">
+									var slider = document.getElementById("sliderBread");
+									var number = document.getElementById("number");
+									number.innerHTML = slider.value;
+									slider.oninput = function(){
+									number.innerHTML = this.value;
+								}
+								</script>
+								<button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<span class="shop-item-title" id="product_text_2" name="product_text_2">Milk</span>
+							<img  class="shop-item-image" id="img2" name="product_image_2" src="../img/milk.jpg">
+							<div class="shop-item-details">
+								<p class="shop-item-price" id="price_2" name="price_2">&pound;14.99</p>
+								<input type="range" min="1" max="20" value="1" id="sliderMilk" class="slider">
+								<p class="item-text">Quantity to add: <span id="number2"></span></p>
+								<script type="text/javascript">
+									var slider2 = document.getElementById("sliderMilk");
+									var number2 = document.getElementById("number2");
+									number2.innerHTML = slider2.value;
+									slider2.oninput = function(){
+									number2.innerHTML = this.value;
+								}
+								</script>
+								<button class="btn btn-primary shop-item-button"type="button">ADD TO BASKET</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<span class="shop-item-title" id="product_text_3" name="product_text_3">Fruit</span>
+							<img class="shop-item-image" id="img3" name="product_image_3" src="../img/fruit.jpg">
+							<div class="shop-item-details">
+								<p class="shop-item-price" id="price_3" name="price_3">&pound;9.99</p>
+								<input type="range" min="1" max="20" value="1" id="sliderFruit" class="slider">
+								<p class="item-text">Quantity to add: <span id="number3"></span></p>
+								<script type="text/javascript">
+									var slider3 = document.getElementById("sliderFruit");
+									var number3 = document.getElementById("number3");
+									number3.innerHTML = slider3.value;
+									slider3.oninput = function(){
+									number3.innerHTML = this.value;
+								}
+								</script>
+								<button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<span class="shop-item-title" id="product_text_4" name="product_text_4">Crisps</span>
+							<img class="shop-item-image" id="img4" name="product_image_4" src="../img/crisps.jpg">
+							<div class="shop-item-details">
+								<p class="shop-item-price" id="price_4" name="price_4">&pound;19.99</p>
+								<input type="range" min="1" max="20" value="1" id="sliderCrisps" class="slider">
+								<p class="item-text">Quantity to add: <span id="number4"></span></p>
+								<script type="text/javascript">
+									var slider4 = document.getElementById("sliderCrisps");
+									var number4 = document.getElementById("number4");
+									number4.innerHTML = slider4.value;
+									slider4.oninput = function(){
+									number4.innerHTML = this.value;
+								}
+								</script>
+								<button class="btn btn-primary shop-item-button" type="button">ADD TO BASKET</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="container content-section">
+					<h2 class="section-header">Basket</h2>
+					<div class="cart-row">
+						<span class="cart-item cart-header cart-column">Item</span>
+						<span class="cart-price cart-header cart-column">Price</span>
+						<span class="cart-quantity cart-header cart-column">Quantity</span>
+					</div>
+					<div id="basket_product_text"class="cart-items">
+					</div>
+					<div class="cart-total">
+						<strong class="cart-total-title">Total</strong>
+						<span id="basket_cost_text" name="total_price" class="cart-total-price">&pound;0.00</span>
+						<input type="hidden" id ="total_price" name="total_price" value='£0.00'/>
+					</div>
+					<button class="btn btn-primary btn-purchase" type="submit">CHECKOUT</button>
+				</section>
+			</form>
+		</div>
+		<div id="copyright_footer">
+			&copy; Edge Testing 2019. All Rights Reserved. All third party trademarks are hereby acknowledged.
+		</div>
+	</body>
+</html>
