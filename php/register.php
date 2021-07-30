@@ -21,6 +21,8 @@
 			</div>
 		</div>
 		<div id="main_div">
+			Please wait....
+            <img class="main_text" src="../img/loading.svg" alt="Animated spinning loading icon" height="82" width="82">
 			<div class="main_text">
 				<?php
 				// define variables and set to empty values

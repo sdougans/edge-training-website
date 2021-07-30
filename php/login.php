@@ -64,7 +64,7 @@
 						}
 						
 						if(strlen($match) == 0){
-							echo "Invalid username or password\n";
+							echo "Invalid username or password";
 						}
 						else{
 							echo "Login successful";
