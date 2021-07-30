@@ -22,41 +22,15 @@
 		</div>
 		<div id="main_div">
             Please wait....
-            <img src="../img/loading.svg" alt="This is my animated image" height="42" width="42">
+            <img class="main_text" src="../img/loading.svg" alt="Animated spinning loading icon" height="82" width="82">
 			<div class="main_text">
 				<?php
-				// define variables and set to empty values
+				
 				$username = $password = "";
                 $valid = 'False';
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					$username = test_input($_POST["username"]);
 					$password = test_input($_POST["password"]);
-				  
-					/*$dbhost = 'localhost';
-					$dbuser = 'root';
-					$dbpass = '';
-					$valid = 'False';
-				   
-					$mysqli = new mysqli($dbhost, $dbuser, $dbpass, "EdgeTraining");
-					$sql = 'SELECT username, password FROM loginDetails';
-					$result = $mysqli->query($sql);
-
-				   
-					$match = "";
-					while($row = mysqli_fetch_array($result)) {
-						if($row['username'] == $username and $row['password'] == $password){
-							$match = "Yes";
-						}
-					}
-					
-					if(strlen($match) == 0){
-						echo "Invalid username or password";
-					}
-					else{
-						echo "Login successful";
-						$valid ='True';
-					}
-					mysqli_close($mysqli);*/
                     
                     if($username == "user1" && $password == "pass1"){
                         $valid = 'True';
@@ -72,7 +46,32 @@
                     }
                     else if($username == "user5" && $password == "pass5"){
                         $valid = 'True';
-                    }
+                    }else{
+						$dbhost = 'localhost';
+						$dbuser = 'root';
+						$dbpass = '';
+						$valid = 'False';
+					
+						$mysqli = new mysqli($dbhost, $dbuser, $dbpass, "EdgeTraining");
+						$sql = 'SELECT username, password FROM loginDetails';
+						$result = $mysqli->query($sql);
+
+						$match = "";
+						while($row = mysqli_fetch_array($result)) {
+							if($row['username'] == $username and $row['password'] == $password){
+								$match = "Yes";
+							}
+						}
+						
+						if(strlen($match) == 0){
+							echo "Invalid username or password\n";
+						}
+						else{
+							echo "Login successful";
+							$valid ='True';
+						}
+						mysqli_close($mysqli);
+					}
 				}
 
 				function test_input($data) {
